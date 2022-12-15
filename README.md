@@ -32,7 +32,7 @@ If you are working with several versions of NodeJS, we recommend you install [nv
 ### 2.2 Starting the project
 
 - The `docker image build --no-cache -t micro-api .` command will allow you to build your image.
-- The `docker container run --name micro-api -p 3000:3000 -dt micro-api yarn` command will allow you to create your Docker container and run your image on port 3000.
+- The `docker container run --name micro-api -p 3001:3001 -dt micro-api yarn` command will allow you to create your Docker container and run your image on port 3001.
 - The `docker container stop micro-api` command will allow you to stop your micro-api.
 - The `docker container rm micro-api` command will allow you to delete your micro-api container.
 
@@ -50,15 +50,15 @@ Once in the container, run the `yarn dev` command.
 
 This project includes four endpoints that you will be able to use: 
 
-- `http://localhost:3000/user/${userId}` - retrieves information from a user. This first endpoint includes the user id, user information (first name, last name and age), the current day's score (todayScore) and key data (calorie, macronutrient, etc.).
-- `http://localhost:3000/user/${userId}/activity` - retrieves a user's activity day by day with kilograms and calories.
-- `http://localhost:3000/user/${userId}/average-sessions` - retrieves the average sessions of a user per day. The week starts on Monday.
-- `http://localhost:3000/user/${userId}/performance` - retrieves a user's performance (energy, endurance, etc.).
+- `http://localhost:3001/user/${userId}` - retrieves information from a user. This first endpoint includes the user id, user information (first name, last name and age), the current day's score (todayScore) and key data (calorie, macronutrient, etc.).
+- `http://localhost:3001/user/${userId}/activity` - retrieves a user's activity day by day with kilograms and calories.
+- `http://localhost:3001/user/${userId}/average-sessions` - retrieves the average sessions of a user per day. The week starts on Monday.
+- `http://localhost:3001/user/${userId}/performance` - retrieves a user's performance (energy, endurance, etc.).
 
 
 **Warning, currently only two users have been mocked. They have userId 12 and 18 respectively.**
 
 ### 4.2 Examples of queries
 
-- `http://localhost:3000/user/12/performance` - Retrieves the performance of the user with id 12
-- `http://localhost:3000/user/18` - Retrieves user 18's main information.
+- `http://localhost:3001/user/12/performance` - Retrieves the performance of the user with id 12
+- `http://localhost:3001/user/18` - Retrieves user 18's main information.
